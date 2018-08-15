@@ -17,6 +17,7 @@ require([
     this.playing = false;
     this.paused = true;
     this.$button.on('click', $.proxy(this.play_pause, this));
+    window.alert("Hello world! Lets start again");
   }
   MainView.prototype.onstart = function() {
     this.playing = true;
@@ -163,7 +164,6 @@ require([
         responsiveVoice.pause();
       }
     } else {
-      alert(this.extract_text());
       responsiveVoice.speak(
         this.extract_text(),
         this.voice, {

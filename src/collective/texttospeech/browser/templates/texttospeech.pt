@@ -1,6 +1,7 @@
 <div i18n:domain="collective.texttospeech"
      tal:on-error="nothing"
      id="viewlet-texttospeech"
+     class="container"
      data-label-stopped="Listen"
      data-label-playing="Pause"
      data-label-paused="Resume"
@@ -12,7 +13,7 @@
                       data-label-playing;
                       data-label-paused;
                       data-error-message">
-     <button id="texttospeech-button"
+  <button id="texttospeech-button"
           class="stopped"
           type="button"
           title="Speech synthesis control"
@@ -20,3 +21,14 @@
           i18n:attributes="title"
           i18n:translate="">Listen</button>
 </div>
+
+<script>
+require([
+  'jquery',
+  'http://code.responsivevoice.org/1.5/responsivevoice.js'
+], function() {
+  'use strict';
+  var text = $('#content').val();
+  responsiveVoice.speak(text);
+});
+</script>

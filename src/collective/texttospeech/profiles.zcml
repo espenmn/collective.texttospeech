@@ -2,6 +2,8 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.texttospeech">
 
   <genericsetup:registerProfile
@@ -12,6 +14,16 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       i18n:attributes="title; description"
       />
+
+  <genericsetup:registerProfile
+      name="a_plone_51"
+      title="Text-to-Speech for Plon 5.x"
+      directory="profiles/a_Plone_51"
+      description="Enables speech synthesis in Plone 5.x."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      zcml:condition="have plone-5"
+      />
+
 
   <genericsetup:registerProfile
       name="uninstall"

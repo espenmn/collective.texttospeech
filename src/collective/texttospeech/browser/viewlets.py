@@ -12,12 +12,12 @@ class TextToSpeechViewlet(ViewletBase):
     def enabled(self):
         """Check if the viewlet must be shown in current context.
 
-        The viewlet is shown to anonymous users only if:
+        The viewlet is shown to all users only if:
         - it is globally enabled, and
         - the content type in context is also enabled
         """
-        if not api.user.is_anonymous():
-            return False
+        #if not api.user.is_anonymous():
+        #    return False
 
         globally_enabled = api.portal.get_registry_record(
             ITextToSpeechControlPanel.__identifier__ + '.globally_enabled')
