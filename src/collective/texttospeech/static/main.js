@@ -136,7 +136,13 @@ require([
     // extract page text
     var i, len, $el, text, byline_added;
     this.results = [];
-    this.walk_tree($('#content'), this.extract_element_text);
+    var content = $('#content');
+    var md = window.getSelection().toString();
+    var len = md.length;
+    if (len > 10)  {
+    	return md;
+    }
+    this.walk_tree(content, this.extract_element_text);
     return this.results.join(' ');
   };
   MainView.prototype.play_pause = function(e) {
