@@ -21,14 +21,4 @@
           i18n:attributes="title"
           i18n:translate="">Listen</button>
 </div>
-
-<script>
-require([
-  'jquery',
-  'http://code.responsivevoice.org/1.5/responsivevoice.js'
-], function() {
-  'use strict';
-  var text = $('#content').val();
-  responsiveVoice.speak(text);
-});
-</script>
+ 

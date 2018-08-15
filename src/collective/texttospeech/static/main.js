@@ -50,8 +50,6 @@ require([
     if (el.tagName === 'IFRAME') {
       return false;
     }
-    alert('jord el');
-    alert(el);
     // check if element is a text or any container (ex.: <div> <p>)
     // https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType#Node_type_constants
     var valid_types = [
@@ -86,7 +84,7 @@ require([
   };
   MainView.prototype.remove_invisible_items = function(child) {
     // recursive method used in conjunction with walk_tree to remove invisible elements
-    $child = $(child);
+    var $child = $(child);
     if (child.nodeType === Node.ELEMENT_NODE &&
         this.is_invisible($child) === false) {
       $child.remove();
@@ -96,9 +94,7 @@ require([
   };
   MainView.prototype.extract_element_text = function(child) {
     // recursive method used in conjunction with walk_tree to extract texts
-    alert('here is the child');
-    alert(child);
-    $child = $(child);
+    var $child = $(child);
     if (this.is_valid_element(child) === false ||
         this.is_invisible($child)    === true  ||
         this.is_blacklisted($child)  === true) {
@@ -110,7 +106,7 @@ require([
       if (this.has_valid_text($child) === true) {
         var $clone = $child.clone();
         this.walk_tree($clone, this.remove_invisible_items);
-        text = $clone.text();
+        var text = $clone.text();
       } else {
         this.walk_tree($child, this.extract_element_text);
         return;
@@ -138,13 +134,9 @@ require([
   };
   MainView.prototype.extract_text = function() {
     // extract page text
-    alert('lets extract');
-    alert(text);
-    alert($('#content'));
     var i, len, $el, text, byline_added;
     this.results = [];
     this.walk_tree($('#content'), this.extract_element_text);
-    alert(this.results);
     return this.results.join(' ');
   };
   MainView.prototype.play_pause = function(e) {
@@ -163,7 +155,6 @@ require([
         responsiveVoice.pause();
       }
     } else {
-      alert(this.extract_text());
       responsiveVoice.speak(
         this.extract_text(),
         this.voice, {
@@ -221,7 +212,7 @@ if (typeof window.responsiveVoice !== "undefined") {
       alert(error_message);
     }
   });
-}
+};
 });
 
 
