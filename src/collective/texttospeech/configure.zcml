@@ -23,6 +23,14 @@
       permission="collective.texttospeech.Setup"
       />
 
+  <!-- Lineage Control Panel -->
+  <browser:page
+        name="texttospeech-settings"
+        for="collective.lineage.interfaces.IChildSite"
+        class=".controlpanel.TextToSpeechControlPanel"
+        permission="collective.texttospeech.Setup"
+  />
+
   <browser:resourceDirectory
       name="collective.texttospeech"
       directory="static"

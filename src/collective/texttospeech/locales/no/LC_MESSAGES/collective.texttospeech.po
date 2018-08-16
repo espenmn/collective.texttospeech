@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-07-11 17:24+0000\n"
-"PO-Revision-Date: 2018-08-16 18:07+0100\n"
+"PO-Revision-Date: 2018-08-16 18:16+0100\n"
 "Last-Translator: espenm <post@medialog.no>\n"
 "Language-Team: Gried Medialog AS <espen@medialog.no>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: collective/texttospeech/interfaces.py:20
 msgid "Enable speech synthesis?"
-msgstr "Enable speech synthesis?24/5000Aktiver talesyntese?"
+msgstr "Aktiver talesyntese?"
 
 #: collective/texttospeech/interfaces.py:26
 msgid "Enabled Content Types"
@@ -62,7 +62,7 @@ msgstr "Her kan du endre innstillinger for talesyntese."
 
 #: collective/texttospeech/interfaces.py:21
 msgid "If selected, speech synthesis feature will be enabled sitewide."
-msgstr "Hvis valgt, vil talesyntesegenskapen aktiveres over hele nettstedet"
+msgstr "Aktiver talesyntese"
 
 #: collective/texttospeech/browser/templates/texttospeech.pt:1
 msgid "Listen"
