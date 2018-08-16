@@ -13,11 +13,12 @@
       description="Enables speech synthesis in Plone."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       i18n:attributes="title; description"
+        zcml:condition="not-have plone-5"
       />
 
   <genericsetup:registerProfile
       name="a_plone_51"
-      title="Text-to-Speech for Plon 5.x"
+      title="Text-to-Speech for Plone 5.x"
       directory="profiles/a_Plone_51"
       description="Enables speech synthesis in Plone 5.x."
       provides="Products.GenericSetup.interfaces.EXTENSION"
