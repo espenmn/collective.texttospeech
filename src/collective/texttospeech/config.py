@@ -13,7 +13,9 @@ DEFAULT_ENABLED_CONTENT_TYPES = [
 DEFAULT_CSS_CLASS_BLACKLIST = set([
     'image-caption',  # image captions
     'pullquote',  # side quotes
+    'dont-read', #everything with .dont-read class
     # TODO: find out equivalent classes for Plone 5
 ])
 
 IS_PLONE_5 = api.env.plone_version().startswith('5')
+#Looks like this did not work
