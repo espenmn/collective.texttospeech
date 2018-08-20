@@ -16,7 +16,7 @@
   <button id="texttospeech-button"
           class="stopped"
           type="button"
-          title="Speech synthesis control"
+          title="Les høyt (merk: du kan markere tekst)"
           tal:condition="view/enabled"
           i18n:attributes="title"
           i18n:translate="">Les</button>
