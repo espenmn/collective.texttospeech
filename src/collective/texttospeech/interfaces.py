@@ -8,12 +8,10 @@ from zope.interface import Interface
 
 
 class IBrowserLayer(Interface):
-
     """A layer specific for this add-on product."""
 
 
 class ITextToSpeechControlPanel(form.Schema):
-
     """Schema for the control panel form."""
 
     globally_enabled = schema.Bool(

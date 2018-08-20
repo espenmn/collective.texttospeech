@@ -138,8 +138,7 @@ require([
     this.results = [];
     var content = $('#content');
     var md = window.getSelection().toString();
-    var len = md.length;
-    if (len > 10)  {
+    if (md.length > 10)  {
     	return md;
     }
     this.walk_tree(content, this.extract_element_text);
