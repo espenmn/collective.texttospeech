@@ -19,5 +19,5 @@
           title="Speech synthesis control"
           tal:condition="view/enabled"
           i18n:attributes="title"
-          i18n:translate="">Listen</button>
+          i18n:translate="">Les</button>
 </div>
