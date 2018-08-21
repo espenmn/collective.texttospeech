@@ -14,7 +14,7 @@
                       data-label-paused;
                       data-error-message">
   <button id="texttospeech-button"
-          class="stopped"
+          class="stopped not-read"
           type="button"
           title="Les høyt (merk: du kan markere tekst)"
           tal:condition="view/enabled"
