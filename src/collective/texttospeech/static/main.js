@@ -1,4 +1,5 @@
 require([
+   'plone',
   'jquery',
   'http://code.responsivevoice.org/1.5/responsivevoice.js'
 ], function() {
