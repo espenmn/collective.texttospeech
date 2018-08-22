@@ -12,7 +12,8 @@
      i18n:attributes="data-label-stopped;
                       data-label-playing;
                       data-label-paused;
-                      data-error-message">
+                      data-error-message"
+                      tal:condition="not: context/donttalk|None">
   <button id="texttospeech-button"
           class="stopped not-read"
           type="button"
