@@ -1,7 +1,7 @@
 require([
    'plone',
   'jquery',
-  'code.responsivevoice.org/1.6.1/responsivevoice.js'
+  '++resource++collective.texttospeech/responsivevoice'
 ], function() {
   'use strict';
    var MainView = (function() {
