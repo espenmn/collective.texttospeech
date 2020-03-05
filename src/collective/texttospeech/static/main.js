@@ -1,7 +1,7 @@
 require([
    'plone',
   'jquery',
-  'http://code.responsivevoice.org/1.5/responsivevoice.js'
+  'code.responsivevoice.org/1.6.1/responsivevoice.js'
 ], function() {
   'use strict';
    var MainView = (function() {
